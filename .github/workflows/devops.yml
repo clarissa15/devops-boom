@@ -14,18 +14,21 @@ jobs:
       - name:  Code checkout
         run: echo "Code checkout done"
   build:
+    needs: code
     runs-on: ubuntu-latest
     # steps of each job
     steps:
       - name:  Code checkout
         run: echo "Code build done"
   test:
+    needs: build
     runs-on: ubuntu-latest
     # steps of each job
     steps:
       - name:  Code checkout
         run: echo "Code test done"
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     # steps of each job
     steps:
