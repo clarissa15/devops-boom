@@ -1,0 +1,24 @@
+## workflow ###
+# Name of the Workflow
+name: CICD
+
+
+## jobs
+jobs:
+  code:
+  ## steps
+    steps:
+      - name:  Code checkout
+        run: echo "Code checkout done"
+  build:
+    steps:
+      - name:  Code checkout
+        run: echo "Code build done"
+  test:
+    steps:
+      - name:  Code checkout
+        run: echo "Code test done"
+  deploy:
+    steps:
+      - name:  Code checkout
+        run: echo "Code deploy done"
